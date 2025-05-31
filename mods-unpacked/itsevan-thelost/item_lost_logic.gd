@@ -3,7 +3,6 @@ extends ItemScript
 var stat_mult: StatMultiplier
 var laff_total: int = 0
 
-
 func on_collect(_item: Item, _object: Node3D) -> void:
 	setup()
 
