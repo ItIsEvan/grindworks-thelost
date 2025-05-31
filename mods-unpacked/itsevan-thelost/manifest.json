@@ -3,7 +3,7 @@
 	"namespace": "itsevan",
 	"version_number": "1.0.0",
 	"description": "Playable Toon with 1 Laff",
-	"website_url": "https://github.com/example/repo",
+	"website_url": "https://github.com/ItIsEvan/grindworks-thelost",
 	"dependencies": [],
 	"extra": {
 		"godot": {

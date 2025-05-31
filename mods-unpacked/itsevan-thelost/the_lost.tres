@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=17 format=3 uid="uid://cwqj4kavs5ie8"]
+[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=18 format=3 uid="uid://cwqj4kavs5ie8"]
 
 [ext_resource type="Script" uid="uid://ts8xpgftpmty" path="res://objects/player/character.gd" id="1_48wdd"]
 [ext_resource type="Script" uid="uid://o2fe7ud1faj6" path="res://objects/battle/battle_resources/stats.gd" id="1_v1swc"]
@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://tyi7ukxtvcgc" path="res://objects/battle/battle_resources/gag_loadouts/loadouts/standard_loadout.tres" id="8_y7pfg"]
 [ext_resource type="Resource" uid="uid://bmujfvitpbclh" path="res://mods-unpacked/itsevan-thelost/lost_logic.tres" id="11_s3om5"]
 [ext_resource type="Resource" uid="uid://cm6linnaoxko7" path="res://mods-unpacked/itsevan-thelost/lost_setup.tres" id="12_ioapm"]
+[ext_resource type="Resource" uid="uid://wu70ua24wujr" path="res://objects/items/resources/active/unstoppable_gobstopper.tres" id="13_ioapm"]
 
 [sub_resource type="Resource" id="Resource_5wikq"]
 script = ExtResource("1_v1swc")
@@ -59,12 +60,12 @@ script = ExtResource("1_48wdd")
 character_name = "The Lost"
 character_summary = "- Max Laff of 1
 - Defense boosts contribute to Evasiveness
-- Starts with 3 Turns & Maxed Gags
-- Good Luck"
+- A battle's first Cog attack will always miss
+- Starts with maxed stats & Gobstopper"
 dna = SubResource("Resource_gditg")
 gag_loadout = ExtResource("8_y7pfg")
 starting_laff = 1
-starting_items = Array[ExtResource("2_mhb51")]([ExtResource("12_ioapm"), ExtResource("11_s3om5")])
+starting_items = Array[ExtResource("2_mhb51")]([ExtResource("12_ioapm"), ExtResource("11_s3om5"), ExtResource("13_ioapm")])
 base_stats = SubResource("Resource_5wikq")
 override_index = -1
 achievement_qualities = Dictionary[int, String]({})
