@@ -12,6 +12,7 @@ const EXLUDE_ITEMS: Array[String] = [
 	"res://objects/items/resources/passive/starfish_treasure.tres",
 	"res://objects/items/resources/passive/zzz_treasure.tres",
 	"res://objects/items/resources/accessories/hats/top_hat.tres",
+	"res://objects/items/resources/passive/laff_boost.tres",
 ]
 
 
