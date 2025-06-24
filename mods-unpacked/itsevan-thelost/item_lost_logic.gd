@@ -1,5 +1,7 @@
 extends ItemScript
 
+const LAFF_IT_UP := "res://scenes/game_floor/floor_modifiers/scripts/anomalies/floor_mod_overheal.gd"
+
 var stat_mult: StatMultiplier
 var mantle_up := true
 
@@ -24,6 +26,7 @@ func setup() -> void:
 	
 	BattleService.s_action_started.connect(on_action_started)
 	BattleService.s_battle_ended.connect(func(): mantle_up = true)
+	Util.s_floor_started.connect(on_floor_start)
 
 func on_defense_changed(new_def: float) -> void:
 	stat_mult.amount = new_def - 1.0
@@ -41,3 +44,12 @@ func on_action_started(action: BattleAction) -> void:
 		action.accuracy = Globals.ACCURACY_GUARANTEE_MISS
 		action.damage = 0
 		mantle_up = false
+
+func on_floor_start(gfloor: GameFloor) -> void:
+	var mod_node: Node = gfloor.get_node('Modifiers')
+	mod_node.child_entered_tree.connect(on_modifier_added)
+
+func on_modifier_added(modifier: FloorModifier) -> void:
+	if modifier.get_script().resource_path == LAFF_IT_UP:
+		await Task.delay(1.0)
+		modifier.raw_boost = 0
